@@ -5,10 +5,7 @@
         <div class="text-center">
             <h1 class="mt-5">Bienvenue {{$etudiant1[0]->prenom}} Dans l'application gestion de stage</h1>
         <p class="lead">Vous etes connecté avec l'email {{$etudiant[2]->email}}</p>
-            <ul class="list-unstyled">
-                <li>Bootstrap 4.6.0</li>
-                <li>jQuery 3.5.1</li>
-            </ul>
+           
         </div>
     </div>
     <!-- Bootstrap core JS-->
