@@ -1033,13 +1033,6 @@
                 "parser",
                 "php"
             ],
-<<<<<<< HEAD
-=======
-            "support": {
-                "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.4"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "time": "2020-12-20T10:01:03+00:00"
         },
         {
@@ -1302,12 +1295,6 @@
                 "psr",
                 "psr-3"
             ],
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.3"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "time": "2020-03-23T09:12:05+00:00"
         },
         {
@@ -1657,12 +1644,6 @@
             ],
             "description": "Eases the creation of beautiful and testable command line interfaces",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/console/tree/v4.4.21"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1725,12 +1706,6 @@
             ],
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v5.2.4"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1797,12 +1772,6 @@
             ],
             "description": "Provides tools to ease debugging PHP code",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/debug/tree/v4.4.20"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -1933,12 +1902,6 @@
             ],
             "description": "Provides tools to manage errors and ease debugging PHP code",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/error-handler/tree/v4.4.21"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2293,12 +2256,6 @@
             ],
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v4.4.20"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2400,12 +2357,6 @@
             ],
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/http-kernel/tree/v4.4.21"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -2486,12 +2437,6 @@
                 "mime",
                 "mime-type"
             ],
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/mime/tree/v5.2.6"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3174,12 +3119,6 @@
             ],
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/process/tree/v4.4.20"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3265,12 +3204,6 @@
                 "uri",
                 "url"
             ],
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/routing/tree/v4.4.20"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3593,12 +3526,6 @@
                 "debug",
                 "dump"
             ],
-<<<<<<< HEAD
-=======
-            "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v4.4.21"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3857,13 +3784,6 @@
                 "flare",
                 "reporting"
             ],
-<<<<<<< HEAD
-=======
-            "support": {
-                "issues": "https://github.com/facade/flare-client-php/issues",
-                "source": "https://github.com/facade/flare-client-php/tree/1.7.0"
-            },
->>>>>>> parent of fe4ede1 (Merge pull request #1 from Mootaz-Mellouli/malek_branch)
             "funding": [
                 {
                     "url": "https://github.com/spatie",
