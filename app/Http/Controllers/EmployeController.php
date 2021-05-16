@@ -16,4 +16,8 @@ class EmployeController extends Controller
         $employe = Employe::all();
         return view('layouts.AdminEmploye.adminEmploye', ['employees' => $employe]);
     }
+    public function edit(Employe $employe)
+    {
+        return view('layouts.AdminEmploye.edit', ['employe' => $employe]);
+    }
 }
