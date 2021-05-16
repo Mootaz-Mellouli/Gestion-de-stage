@@ -26,7 +26,7 @@ Route::get('/employe/employeDetails', 'EmployeController@employeDetails', functi
     return view('layouts.AdminEmploye.adminEmploye');
 })->middleware('auth')->name('adminEmploye');
 
-
+Route::resource('employe', 'EmployeController');
 /********************************************* */
 
 Route::get('/encadreur', 'EncadreurController@encadreurList');

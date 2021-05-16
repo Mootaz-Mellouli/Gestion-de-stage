@@ -219,14 +219,17 @@
                                                     <td>{{ $emp['email'] }}</td>
                                                     <td>{{ $emp['created_at'] }}</td>
                                                     <td>
-                                                        <a href="/employe/employeDetails/{{ $emp->id }}"><i class="far fa-edit"></i></a>
-                                                        <i class="far fa-edit"></i>
-                                                        <i class="far fa-edit"></i>
+                                                        <a href="{{ route('employe.edit', ['employe' => $emp->id]) }}" class="btn btn-warning" title="Edit user {{ $emp->first_name.' '.$emp->last_name  }}">
+                                                            <i class="fas fa-user-edit"></i>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
+                                    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 p-3">
+                                        @yield('main')
+                                    </main>
                                 </div>
                             </div>
                         </div>
