@@ -18,5 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*****************Employe Routes************** */
+
 Route::get('/employe', 'EmployeController@employeList');
+Route::get('/employe/employeDetails', 'EmployeController@employeDetails', function () {
+    return view('layouts.AdminEmploye.adminEmploye');
+})->middleware('auth')->name('adminEmploye');
+
+
+/********************************************* */
+
 Route::get('/encadreur', 'EncadreurController@encadreurList');
