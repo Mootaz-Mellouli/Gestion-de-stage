@@ -22,11 +22,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 /*****************Employe Routes************** */
 
 Route::get('/employe', 'EmployeController@employeList');
-Route::get('/employe/employeDetails', 'EmployeController@employeDetails', function () {
+Route::get('/employe/employeDetails','EmployeController@index', function () {
     return view('layouts.AdminEmploye.adminEmploye');
 })->middleware('auth')->name('adminEmploye');
 
-Route::resource('employe', 'EmployeController');
+Route::resource('employees', 'EmployeController');
 /********************************************* */
 
 Route::get('/encadreur', 'EncadreurController@encadreurList');

@@ -3,7 +3,7 @@
 @section('main')
     <fieldset>
         <legend><i class="fas fa-user-edit"></i> Edit Customer: <strong>{{ $employe->first_name." ".$employe->last_name }}</strong></legend>
-        <form action="{{ route('employe.update', ['employe' => $employe->id]) }}" method="post">
+        <form action="{{ route('employees.update', $employe->id) }}" method="post">
             @method('PUT')
             @include('layouts.AdminEmploye.form')
         </form>
