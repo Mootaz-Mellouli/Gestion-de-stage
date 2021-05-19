@@ -73,7 +73,7 @@ class EmployeController extends Controller
     {
         $validatedData = $request->validate($this->validationRules());
         $employe->update($validatedData);
-        return redirect()->route('layouts.AdminEmploye.show', $employe)->with('updateEmploye', "Employe has been updated successfuly");
+        return redirect()->route('employees.show', $employe)->with('updateEmploye', "Employe has been updated successfuly");
     }
 
     /**
@@ -85,7 +85,7 @@ class EmployeController extends Controller
     public function destroy(Employe $employe)
     {
         $employe->delete();
-        return redirect()->route('layouts.AdminEmploye.index')->with('deleteEmploye', 'Employe has been deleted!');
+        return redirect()->route('employees.index')->with('deleteEmploye', 'Employe has been deleted!');
     }
 
     private function validationRules()

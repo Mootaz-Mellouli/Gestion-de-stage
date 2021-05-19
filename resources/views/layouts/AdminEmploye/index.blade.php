@@ -1,5 +1,13 @@
 @extends('layouts.AdminEmploye.adminEmploye')
 @section('content')
+@if (session('deleteEmploye'))
+    <div class="alert alert-dismissible alert-success fade show" role="alert">
+        {{ session('deleteEmploye') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table mr-1"></i>
@@ -35,7 +43,7 @@
                                     <i class="fas fa-user-edit"></i>
                                 </a>
                                 <a href="#" class="btn btn-danger" title="Delete user {{ $emp->first_name.' '.$emp->last_name  }}"
-                                    onclick="event.preventDefault(); document.querySelector('#delete-customer-form').submit()"><i class="fas fa-user-slash"></i></a>
+                                    onclick="event.preventDefault(); document.querySelector('#delete-employe-form').submit()"><i class="fas fa-user-slash"></i></a>
                                 <form action="{{ route('employees.destroy', $emp->id) }}" method="post" id="delete-employe-form">@csrf @method('DELETE')</form>
                             </td>
                         </tr>

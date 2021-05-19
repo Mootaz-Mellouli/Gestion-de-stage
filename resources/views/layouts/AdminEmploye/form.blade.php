@@ -3,14 +3,14 @@
     <div class="col">
         <div class="form-group">
             <label for="firstname">Firstname</label>
-            <input type="text" name="firstname" value="{{ $emp->first_name ?? old('first_name') }}" id="firstname" class="form-control @error('firstname') is-invalid @enderror @error('lastname') is-invalid @enderror" placeholder="Firstname goes here">
+            <input type="text" name="firstname" value="{{ $employe->first_name ?? old('first_name') }}" id="firstname" class="form-control @error('firstname') is-invalid @enderror @error('lastname') is-invalid @enderror" placeholder="Firstname goes here">
             @error('first_name')<div class="text-danger">{{ $message }}</div>@enderror
             </div>
     </div>
     <div class="col">
         <div class="form-group">
             <label for="lastname">Lastname</label>
-            <input type="text" name="lastname" value="{{ $emp->last_name ?? old('last_name') }}" id="lastname" class="form-control @error('lastname') is-invalid @enderror" placeholder="Lastname goes here">
+            <input type="text" name="lastname" value="{{ $employe->last_name ?? old('last_name') }}" id="lastname" class="form-control @error('lastname') is-invalid @enderror" placeholder="Lastname goes here">
             @error('lastname')<div class="text-danger">{{ $message }}</div>@enderror
             </div>
     </div>
