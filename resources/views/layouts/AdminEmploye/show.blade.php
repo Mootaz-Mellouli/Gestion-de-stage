@@ -1,6 +1,5 @@
 @extends('layouts.AdminEmploye.adminEmploye')
-
-@section('main')
+@section('content')
 @if (session('storeEmploye'))
     <div class="alert alert-dismissible alert-success fade show" role="alert">
         {{ session('storeEmploye') }}
@@ -25,14 +24,6 @@
                 <li class="list-group-item"><i class="fas fa-phone"></i> {{ $employe->phone_number }}</li>
                 <li class="list-group-item"><i class="fas fa-at"></i> {{ $employe->email }}</li>
             </ul>
-            <hr>
-            <a href="{{ route('employees.edit', $employe->id) }}" class="btn btn-warning" title="Edit user {{ $employe->first_name.' '.$employe->last_name  }}">
-                <i class="fas fa-user-edit"></i>
-            </a>
-            <a href="#" class="btn btn-danger" title="Delete user {{ $employe->first_name.' '.$employe->last_name  }}"
-                onclick="event.preventDefault(); document.querySelector('#delete-employe-form').submit()"
-                ><i class="fas fa-user-slash"></i></a>
-            <form action="{{ route('employees.destroy', $employe->id) }}" method="post" id="delete-employe-form">@csrf @method('DELETE')</form>
         </div>
       </div>
 @endsection

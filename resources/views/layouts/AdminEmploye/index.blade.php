@@ -31,7 +31,7 @@
                 <tbody>
                     @foreach ($employees as $key => $emp)
                         <tr>
-                            <td>{{ $key }}</td>
+                            <td>{{ $emp['id'] }}</td>
                             <td>{{ $emp['first_name'] }}</td>
                             <td>{{ $emp['last_name'] }}</td>
                             <td>{{ $emp['phone_number'] }}</td>
