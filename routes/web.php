@@ -14,10 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/','HomeController@welcome');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 /*****************Employe Routes************** */
 
@@ -30,3 +32,6 @@ Route::resource('employees', 'EmployeController');
 /********************************************* */
 
 Route::get('/encadreur', 'EncadreurController@encadreurList');
+
+/***************************************** */
+
