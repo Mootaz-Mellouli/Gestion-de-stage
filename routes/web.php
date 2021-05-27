@@ -26,7 +26,9 @@ Route::get('/employe/employeDetails','EmployeController@index', function () {
     return view('layouts.AdminEmploye.adminEmploye');
 })->middleware('auth')->name('adminEmploye');
 
-Route::resource('employees', 'EmployeController');
+Route::resource('employe/employeDetails', 'EmployeController')->parameters([
+    'employeDetails' => 'employee'
+]);
 /********************************************* */
 
 Route::get('/encadreur', 'EncadreurController@encadreurList');
