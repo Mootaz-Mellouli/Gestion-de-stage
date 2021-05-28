@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Employe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 class EmployeController extends Controller
 {
     public function employeList()
@@ -43,17 +44,18 @@ class EmployeController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
-        $employe = new Employe();
+        $validatedData = $request->validate($this->validationRulesForStore());
+        $employe = new Employe;
         $employe->first_name = $request->firstname;
         $employe->last_name = $request->lastname;
         $employe->phone_number = $request->phone;
         $employe->email = $request->email;
         $employe->password = "";
         $employe->save();
-        //$request->validate($this->validationRules());
-        //$employe = Employe::create($request->all());
         return redirect()->route('employeDetails.show',$employe)->with('storeEmploye', "Employe has been added successfuly");
+    
+        //$employe = Employe::create($validatedData);
+        //return redirect()->route('employeDetails.show',$employe)->with('storeEmploye', "Employe has been added successfuly");
     }
 
     /**
@@ -78,18 +80,14 @@ class EmployeController extends Controller
      */
     public function update(Request $request, Employe $employee)
     {
-        $data = $request->validate($this->validationRules());
-        $employee->update($data);
-        //dd($employe->all());
-        /*$employe = Employe::findOrFail($id);
-        $request->validate($this->validationRules()); 
-        $employe->first_name = $request->firstname;
-        $employe->last_name = $request->lastname;
-        $employe->phone_number = $request->phone;
-        $employe->email = $request->email;
-        $employe->password = "";
-        $employe->remember_token = null;
-        $employe->save();*/
+        $request->validate($this->validationRules());
+        //$employee->update($data);
+        $employee->first_name = $request->firstname;
+        $employee->last_name = $request->lastname;
+        $employee->phone_number = $request->phone;
+        $employee->email = $request->email;
+        $employee->password = "";
+        $employee->save();
         return redirect()->route('employeDetails.show', $employee)->with('updateEmploye', "Employe has been updated successfuly");
     }
 
@@ -101,7 +99,6 @@ class EmployeController extends Controller
      */
     public function destroy(Employe $employee)
     {
-        //$employe = Employe::find($id);
         $employee->delete();
         return redirect()->route('employeDetails.index')->with('deleteEmploye', 'Employe has been deleted!');
     }
@@ -109,10 +106,19 @@ class EmployeController extends Controller
     private function validationRules()
     {
         return [
-            'first_name' => 'required|min:2',
-            'last_name' => 'required|min:2',
-            'phone_number' => 'required',
+            'firstname' => 'required|min:2',
+            'lastname' => 'required|min:2',
+            'phone' => 'required',
             'email' => 'required|email',
+        ];
+    }
+    private function validationRulesForStore()
+    {
+        return [
+            'firstname' => 'required|min:2',
+            'lastname' => 'required|min:2',
+            'phone' => 'required',
+            'email' => 'required|email|unique:employes',
         ];
     }
 }

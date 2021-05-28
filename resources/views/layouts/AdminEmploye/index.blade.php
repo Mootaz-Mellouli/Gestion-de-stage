@@ -25,7 +25,7 @@
                         <th>Telephone</th>
                         <th>Email</th>
                         <th>Start date</th>
-                        <th>Action</th>
+                        <th colspan="3">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,13 +38,19 @@
                             <td>{{ $emp['email'] }}</td>
                             <td>{{ $emp['created_at'] }}</td>
                             <td>
-                                <a href="{{ route('employeDetails.show', [$emp->id]) }}" class="btn btn-info" title="Show details about {{ $emp->first_name.' '.$emp->last_name  }}"><i class="fas fa-user-tag"></i></a>
+                                <a href="{{ route('employeDetails.show', $emp->id) }}" class="btn btn-info" title="Show details about {{ $emp->first_name.' '.$emp->last_name  }}"><i class="fas fa-user-tag"></i></a>
+                            </td>
+                            <td>
                                 <a href="{{ route('employeDetails.edit', $emp->id) }}" class="btn btn-warning" title="Edit user {{ $emp->first_name.' '.$emp->last_name  }}">
                                     <i class="fas fa-user-edit"></i>
                                 </a>
-                                <a href="#" class="btn btn-danger" title="Delete user {{ $emp->first_name.' '.$emp->last_name  }}"
-                                    onclick="event.preventDefault(); document.querySelector('#delete-employe-form').submit()"><i class="fas fa-user-slash"></i></a>
-                                <form action="{{ route('employeDetails.destroy', $emp->id) }}" method="post" id="delete-employe-form">@csrf @method('DELETE')</form>
+                            </td>
+                            <td>
+                                <form action="{{ route('employeDetails.destroy', $emp->id) }}" method="post">
+                                    @csrf 
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger" title="Delete user {{ $emp->first_name.' '.$emp->last_name }}"><i class="fas fa-user-slash"></i></button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
