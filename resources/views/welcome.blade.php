@@ -3,8 +3,8 @@
 @section('content')
 <div class="container">
         <div class="text-center">
-            <h1 class="mt-5">Bienvenue {{$etudiant1[0]->prenom}} Dans l'application gestion de stage</h1>
-        <p class="lead">Vous etes connecté avec l'email {{$etudiant[2]->email}}</p>
+            <h1 class="mt-5">Bienvenue Dans l'application gestion de stage</h1>
+        <p class="lead">Veuillez se connecter pour utiliser notre application</p>
             <ul class="list-unstyled">
                 
             </ul>
