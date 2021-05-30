@@ -11,7 +11,7 @@ $factory->define(Entreprise::class, function (Faker $faker) {
         'nom'=> $faker->word,
         'prenom'=> $faker->word,
         'nomEntreprise'=> $faker->word,
-        'emailEntreprise'=> $faker->word,
-        'email'=> $faker->word
+        'emailEntreprise'=> $faker->email,
+        'email'=> $faker->email
     ];
 });
