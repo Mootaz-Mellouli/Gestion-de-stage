@@ -30,3 +30,5 @@ Route::resource('employees', 'EmployeController');
 /********************************************* */
 
 Route::get('/encadreur', 'EncadreurController@encadreurList');
+
+Route::get('/entreprise','EntrepriseController@entrepriseList');
