@@ -30,6 +30,13 @@
             @error('email')<div class="text-danger">{{ $message }}</div>@enderror
             </div>
     </div>
+    <div class="col">
+        <div class="form-group">
+            <label for="salaire">Salaire</label>
+            <input type="text" name="salaire" value="{{ $employe->salaire ?? old('salaire') }}" id="salaire" class="form-control @error('salaire') is-invalid @enderror" placeholder="TND">
+            @error('salaire')<div class="text-danger">{{ $message }}</div>@enderror
+            </div>
+    </div>
 </div>
 
 <div class="row">

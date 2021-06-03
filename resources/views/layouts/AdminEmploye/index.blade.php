@@ -24,6 +24,7 @@
                         <th>Prenom</th>
                         <th>Telephone</th>
                         <th>Email</th>
+                        <th>Salaire</th>
                         <th>Start date</th>
                         <th colspan="3">Action</th>
                     </tr>
@@ -36,6 +37,7 @@
                             <td>{{ $emp['last_name'] }}</td>
                             <td>{{ $emp['phone_number'] }}</td>
                             <td>{{ $emp['email'] }}</td>
+                            <td>{{ $emp['salaire'] }}</td>
                             <td>{{ $emp['created_at'] }}</td>
                             <td>
                                 <a href="{{ route('employeDetails.show', $emp->id) }}" class="btn btn-info" title="Show details about {{ $emp->first_name.' '.$emp->last_name  }}"><i class="fas fa-user-tag"></i></a>

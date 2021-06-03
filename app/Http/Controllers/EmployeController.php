@@ -50,7 +50,7 @@ class EmployeController extends Controller
         $employe->last_name = $request->lastname;
         $employe->phone_number = $request->phone;
         $employe->email = $request->email;
-        $employe->password = "";
+        $employe->salaire = $request->salaire;
         $employe->save();
         return redirect()->route('employeDetails.show',$employe)->with('storeEmploye', "Employe has been added successfuly");
     
@@ -86,7 +86,7 @@ class EmployeController extends Controller
         $employee->last_name = $request->lastname;
         $employee->phone_number = $request->phone;
         $employee->email = $request->email;
-        $employee->password = "";
+        $employee->salaire = $request->salaire;
         $employee->save();
         return redirect()->route('employeDetails.show', $employee)->with('updateEmploye', "Employe has been updated successfuly");
     }
@@ -109,6 +109,7 @@ class EmployeController extends Controller
             'firstname' => 'required|min:2',
             'lastname' => 'required|min:2',
             'phone' => 'required',
+            'salaire' => 'required',
             'email' => 'required|email',
         ];
     }
@@ -118,6 +119,7 @@ class EmployeController extends Controller
             'firstname' => 'required|min:2',
             'lastname' => 'required|min:2',
             'phone' => 'required',
+            'salaire' => 'required',
             'email' => 'required|email|unique:employes',
         ];
     }
