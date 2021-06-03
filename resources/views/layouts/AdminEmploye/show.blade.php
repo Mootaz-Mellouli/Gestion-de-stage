@@ -23,6 +23,7 @@
                 <li class="list-group-item"><i class="fas fa-user"></i> {{ $employe->first_name.' '.$employe->last_name  }}</li>
                 <li class="list-group-item"><i class="fas fa-phone"></i> {{ $employe->phone_number }}</li>
                 <li class="list-group-item"><i class="fas fa-at"></i> {{ $employe->email }}</li>
+                <li class="list-group-item"><i class="fas fa-money-check-alt"></i> {{ $employe->salaire }} TND/Mois</li>
             </ul>
         </div>
       </div>
