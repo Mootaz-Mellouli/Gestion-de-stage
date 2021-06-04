@@ -11,4 +11,6 @@ class EntrepriseController extends Controller
         $entreprise = Entreprise::all();
         return view('layouts.entreprise', ['entreprise' => $entreprise]);
     }
+
 }
+

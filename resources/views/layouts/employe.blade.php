@@ -12,15 +12,13 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-
         <link rel="stylesheet" href="{{ asset('css/styleEmploye.css') }}" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="employeImages/navbar-logo.png" style="height:50px" alt="..." /></a>
+                <a class="navbar-brand js-scroll-trigger" style="color:white;letter-spacing:3px" href="#page-top"><img src="employeImages/navbar-logo.png" style="height:50px;" alt="logo" />ISET Bizerte</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
@@ -53,6 +51,7 @@
                                                          document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
+                                        <a class="dropdown-item" href="{{ route('employeDetails.index') }}">Dashboard</a>
     
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
@@ -67,7 +66,7 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Bienvenu dans la partie Employe de ce sitte</div>
+                <div class="masthead-subheading">Bienvenu dans la partie Employe de ce site</div>
                 <div class="masthead-heading text-uppercase">Cette partie gére les employés</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Plus d'info</a>
             </div>
@@ -78,7 +77,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <br>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -195,15 +194,8 @@
                 </div>
             </div>
         </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-        <!-- Contact form JS
-            <script src="assets/mail/jqBootstrapValidation.js"></script>
-            <script src="assets/mail/contact_me.js"></script>
-        -->
-        <!-- Core theme JS-->
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/scriptEmploye.js') }}"></script>
 

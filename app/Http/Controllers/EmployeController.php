@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Employe;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
 class EmployeController extends Controller
 {
     public function employeList()
@@ -16,12 +16,9 @@ class EmployeController extends Controller
         $employe = Employe::all();
         return view('layouts.AdminEmploye.employe', ['employees' => $employe]);
     }
-    public function edit($id)
+    public function edit(Employe $employee)
     {
-
-        $employe = Employe::find($id);
-        return view('layouts.AdminEmploye.edit', compact('employe'));
-        //return view('layouts.AdminEmploye.edit', ['employe' => $employe]);
+        return view('layouts.AdminEmploye.edit', ['employe' => $employee]);
     }
     public function index()
     {
@@ -41,19 +38,24 @@ class EmployeController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param  \App\Employe
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        $employe = new Employe();
+        $validatedData = $request->validate($this->validationRulesForStore());
+        $employe = new Employe;
         $employe->first_name = $request->firstname;
         $employe->last_name = $request->lastname;
         $employe->phone_number = $request->phone;
         $employe->email = $request->email;
-        $employe->password = "";
+        $employe->salaire = $request->salaire;
         $employe->save();
-        return redirect()->route('employees.index')->with('storeEmploye', "Employe has been added successfuly");
+        return redirect()->route('employeDetails.show',$employe)->with('storeEmploye', "Employe has been added successfuly");
+    
+        //$employe = Employe::create($validatedData);
+        //return redirect()->route('employeDetails.show',$employe)->with('storeEmploye', "Employe has been added successfuly");
     }
 
     /**
@@ -62,9 +64,10 @@ class EmployeController extends Controller
      * @param  \App\Employe  $employe
      * @return \Illuminate\Http\Response
      */
-    public function show(Employe $employe)
+    public function show(Employe $employee)
     {
-        return view('layouts.AdminEmploye.show', ['employe' => $employe]);
+        //$employe = Employe::find($id);
+        return view('layouts.AdminEmploye.show', ['employe' => $employee]);
     }
 
 
@@ -75,39 +78,49 @@ class EmployeController extends Controller
      * @param  \App\Employe  $employe
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Employe $employee)
     {
-        //dd($request);
         $request->validate($this->validationRules());
-        $employe = Employe::find($id);
-        $employe->first_name = $request->get('first_name');
-        $employe->last_name = $request->get('last_name');
-        $employe->phone_number = $request->get('phone_number');
-        $employe->email = $request->get('email');
-        $employe->save();
-        return redirect()->route('employees.index')->with('updateEmploye', "Employe has been updated successfuly");
+        //$employee->update($data);
+        $employee->first_name = $request->firstname;
+        $employee->last_name = $request->lastname;
+        $employee->phone_number = $request->phone;
+        $employee->email = $request->email;
+        $employee->salaire = $request->salaire;
+        $employee->save();
+        return redirect()->route('employeDetails.show', $employee)->with('updateEmploye', "Employe has been updated successfuly");
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Customer  $employe
+     * @param  \App\Employe  $employe
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Employe $employee)
     {
-        $employe = Employe::find($id);
-        $employe->delete();
-        return redirect()->route('employees.index')->with('deleteEmploye', 'Employe has been deleted!');
+        $employee->delete();
+        return redirect()->route('employeDetails.index')->with('deleteEmploye', 'Employe has been deleted!');
     }
 
     private function validationRules()
     {
         return [
-            'first_name' => 'required|min:2',
-            'last_name' => 'required|min:2',
-            'phone_number' => 'required',
+            'firstname' => 'required|min:2',
+            'lastname' => 'required|min:2',
+            'phone' => 'required',
+            'salaire' => 'required',
             'email' => 'required|email',
+        ];
+    }
+    private function validationRulesForStore()
+    {
+        return [
+            'firstname' => 'required|min:2',
+            'lastname' => 'required|min:2',
+            'phone' => 'required',
+            'salaire' => 'required',
+            'email' => 'required|email|unique:employes',
         ];
     }
 }

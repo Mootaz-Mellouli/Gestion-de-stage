@@ -16,13 +16,14 @@
         </button>
     </div>
 @endif
-    <h3><i class="fas fa-id-card"></i> Details about Employe : <strong>{{ $employe->first_name.' '.$employe->last_name  }}</strong></h3>
+    <h3><i class="fas fa-id-card"></i> Employe : <strong>{{ $employe->first_name.' '.$employe->last_name  }}</strong></h3>
     <div class="card" style="width: 38rem;">
         <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-user"></i> <strong>{{ $employe->first_name.' '.$employe->last_name  }}</strong></h5>
-            <ul class="list-group list-group-flush">Details:
+            <ul class="list-group list-group-flush card-title">Detail d'employe:
+                <li class="list-group-item"><i class="fas fa-user"></i> {{ $employe->first_name.' '.$employe->last_name  }}</li>
                 <li class="list-group-item"><i class="fas fa-phone"></i> {{ $employe->phone_number }}</li>
                 <li class="list-group-item"><i class="fas fa-at"></i> {{ $employe->email }}</li>
+                <li class="list-group-item"><i class="fas fa-money-check-alt"></i> {{ $employe->salaire }} TND/Mois</li>
             </ul>
         </div>
       </div>
