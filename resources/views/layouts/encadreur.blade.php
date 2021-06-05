@@ -1,69 +1,74 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('css/styleEmploye.css') }}" />
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-
-</head>
-<body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Encadrant - ISET Bizerte</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="{{ asset('css/styleEmploye.css') }}" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-               
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
+                <a class="navbar-brand js-scroll-trigger" style="color:white;letter-spacing:3px" href="#page-top"><img src="employeImages/navbar-logo.png" style="height:50px;" alt="logo" />ISET Bizerte</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
                 </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                            <!-- Authentication Links -->
+                            @guest
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                                @endif
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+    
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('encadreurDetails.index') }}">Dashboard</a>
+    
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
                     </ul>
                 </div>
             </div>
         </nav>
- <!-- Masthead-->
- <header class="masthead">
+        <!-- Masthead-->
+        <header class="masthead">
             <div class="container">
-                <div style="color:black;" class="masthead-subheading">Bienvenu dans la partie Encadrants de ce site</div>
-                <div style="color:black;" class="masthead-heading text-uppercase">Cette partie gére les encadrants</div>
-                <a style="color:black;" class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Plus d'info</a>
+                <div class="masthead-subheading">Bienvenu dans la partie encadrant de ce site</div>
+                <div class="masthead-heading text-uppercase">Cette partie gère les encadrants</div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Plus d'info</a>
             </div>
         </header>
 
@@ -72,7 +77,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <br>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -108,7 +113,7 @@
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Liste d'encadrants</h2>
+                    <h2 class="section-heading text-uppercase">Listes des Encadrants</h2>
                     <h3 class="section-subheading text-muted"></h3>
                 </div>
                 <div class="row">
@@ -116,10 +121,12 @@
                         <div class="col-lg-4">
                             <div class="team-member">
                                <h4>{{ $enc['first_name'] }} {{ $enc['last_name'] }}</h4>
-                                <p class="text-muted">Lorem ipsum</p>
+                                <p class="text-muted">{{ $enc['specialty'] }}</p>
+                                <p class="text-muted">{{ $enc['email'] }}</p>
+
                                 <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-google"></i></a>
+                                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                         </div>
                     @endforeach
@@ -189,18 +196,11 @@
                 </div>
             </div>
         </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-        <!-- Contact form JS
-            <script src="assets/mail/jqBootstrapValidation.js"></script>
-            <script src="assets/mail/contact_me.js"></script>
-        -->
-        <!-- Core theme JS-->
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('js/scriptEmploye.js') }}"></script>
 
         
-</body>
+    </body>
 </html>

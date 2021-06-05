@@ -34,6 +34,13 @@ Route::group(['middleware' => 'auth'], function() {
 /********************************************* */
 
 Route::get('/encadreur', 'EncadreurController@encadreurList');
+Route::group(['middleware' => 'auth'], function() {
+    Route::resource('encadreur/encadreurDetails', 'EncadreurController')->parameters([
+        'encadreurDetails' => 'encadreur'
+    ]);
+  });
+
+/********************************************* */
 
 
 Route::get('/entreprise','EntrepriseController@entrepriseList');

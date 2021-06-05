@@ -17,10 +17,9 @@ class CreateEncadreursTable extends Migration
             $table->increments('id');
             $table->string('first_name',90);
             $table->string('last_name',90);
+            $table->string('phone_number');
             $table->string('email')->unique();
             $table->string('specialty',90);
-            $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
