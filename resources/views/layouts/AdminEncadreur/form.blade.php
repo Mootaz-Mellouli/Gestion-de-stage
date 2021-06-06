@@ -32,8 +32,8 @@
     </div>
     <div class="col">
         <div class="form-group">
-            <label for="salaire">Specialité</label>
-            <input type="text" name="salaire" value="{{ $encadreur->specialty ?? old('specialty') }}" id="salaire" class="form-control @error('specialty') is-invalid @enderror" placeholder="TND">
+            <label for="specialty">Specialité</label>
+            <input type="text" name="specialty" value="{{ $encadreur->specialty ?? old('specialty') }}" id="specialty" class="form-control @error('specialty') is-invalid @enderror" placeholder="TND">
             @error('specialty')<div class="text-danger">{{ $message }}</div>@enderror
             </div>
     </div>

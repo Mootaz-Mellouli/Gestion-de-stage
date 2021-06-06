@@ -85,24 +85,23 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Lettre d'affectation</h4>
-                        <p class="text-muted">La creation des les lettres d'affectation</p>
+                        <h4 class="my-3">La Préparation du Rapport de Stage</h4>
+                        <p class="text-muted">Permettre aux Enseignants de l’ISET d’utiliser le rapport de stage ou le PFE comme support pédagogique et d’établir des relations permanentes avec les Entreprises partenaires</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-male fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Ressource humaine</h4>
-                        <p class="text-muted">Informations sur les avantages sociaux et le développement professionnel, et ressources pour les managers</p>
+                        <h4 class="my-3">La Préparation au Professionnalisme</h4>
+                        <p class="text-muted">Permettre aux Etudiants de faire la synthèse de leurs connaissances et d’acquérir les comportements et l’autonomie nécessaires à la professionnalisation.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-user-shield fa-stack-2x text-primary"></i>
-                            <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-check-circle fa-stack-2x text-primary"></i>
                         </span>
-                        <h4 class="my-3">Securité</h4>
-                        <p class="text-muted">Assurer la sécurité et le bien-être de la communauté de l'Université</p>
+                        <h4 class="my-3">L'évaluation</h4>
+                        <p class="text-muted">Permettre au Jury de la Licence d’évaluer les compétences acquises par les étudiants</p>
                     </div>
                 </div>
             </div>

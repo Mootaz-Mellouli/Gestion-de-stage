@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 use App\Encadreur;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewEncadrant;
+
+
 
 class EncadreurController extends Controller
 {
@@ -46,15 +50,18 @@ class EncadreurController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate($this->validationRulesForStore());
-        $encadreur = new Employe;
+        $encadreur = new Encadreur;
         $encadreur->first_name = $request->firstname;
         $encadreur->last_name = $request->lastname;
         $encadreur->phone_number = $request->phone;
         $encadreur->email = $request->email;
         $encadreur->specialty = $request->specialty;
         $encadreur->save();
-        return redirect()->route('encadreurDetails.show',$encadreur)->with('storeEncadreur', "Encadreur has been added successfuly");
-    
+
+        Mail::to($encadreur->email)->send(new NewEncadrant());
+
+        return redirect()->route('encadreurDetails.show',$encadreur)->with('storeEncadreur', "Encadreur a été ajouté avec succès");
+        
         //$employe = Employe::create($validatedData);
         //return redirect()->route('employeDetails.show',$employe)->with('storeEmploye', "Employe has been added successfuly");
     }
@@ -65,7 +72,7 @@ class EncadreurController extends Controller
      * @param  \App\encadreur  $encadreur
      * @return \Illuminate\Http\Response
      */
-    public function show(Employe $encadreur)
+    public function show(Encadreur $encadreur)
     {
         //$employe = Employe::find($id);
         return view('layouts.AdminEncadreur.show', ['encadreur' => $encadreur]);
@@ -89,19 +96,14 @@ class EncadreurController extends Controller
         $encadreur->email = $request->email;
         $encadreur->specialty = $request->specialty;
         $encadreur->save();
-        return redirect()->route('employeDetails.show', $employee)->with('updateEncadreur', "Encadreur has been updated successfuly");
+        return redirect()->route('employeDetails.show', $employee)->with('updateEncadreur', "Encadreur a été mis à jour avec succès");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Employe  $employe
-     * @return \Illuminate\Http\Response
-     */
+  
     public function destroy(Encadreur $encadreur)
     {
         $encadreur->delete();
-        return redirect()->route('encadreurDetails.index')->with('deleteEncadreur', 'Encadreur has been deleted!');
+        return redirect()->route('encadreurDetails.index')->with('deleteEncadreur', 'Encadreur a été supprimé!');
     }
 
     private function validationRules()
