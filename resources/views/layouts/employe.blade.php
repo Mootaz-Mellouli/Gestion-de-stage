@@ -25,10 +25,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('employe') }}#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('employe.docs') }}">Documentation</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('employe') }}#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('employe') }}#contact">Contact</a></li>
                             <!-- Authentication Links -->
                             @guest
                                 <li class="nav-item">
@@ -66,10 +66,10 @@
         </nav>
         <main>@yield('content')</main>
         <!-- Footer-->
-        <footer class="footer py-4">
+        <footer class="footer py-4" style="background-color:rgb(22, 22, 22)">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">
+                    <div class="col-lg-4 text-lg-left" style="color:white">
                         Copyright &copy; ISET Bizerte
                         <script>
                             document.write(new Date().getFullYear());
