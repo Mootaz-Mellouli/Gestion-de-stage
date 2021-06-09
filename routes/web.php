@@ -48,4 +48,4 @@ Route::get('/entreprise','EntrepriseController@entrepriseList');
 
 /***************************************** */
 
-
+Route::get('/etudiant', 'EtudiantController@etudiantList');
