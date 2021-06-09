@@ -37,4 +37,13 @@ class HomeController extends Controller
 
         ]);
     }
+    public function goEncadreur(){
+        return view('layouts/encadreur');
+    }
+    public function goEtudiant(){
+        return view('layouts/etudiant');
+    }
+    public function goEntreprise(){
+        return view('layouts/entreprise');
+    }
 }

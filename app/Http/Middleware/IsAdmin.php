@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+use Auth;
 use Closure;
 
 class IsAdmin
@@ -15,7 +15,7 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-        if (!Auth::user()->admin) {
+        if (Auth::user()->role != 1) {
             return redirect('home');
         }
         return $next($request);
