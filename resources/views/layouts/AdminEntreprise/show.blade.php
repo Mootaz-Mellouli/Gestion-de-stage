@@ -26,4 +26,7 @@
                 <li class="list-group-item"><i class="fas fa-at"></i> {{ $entreprise->emailEntreprise }}</li>
             </ul>
         </div>
+
       </div>
+@endsection
+

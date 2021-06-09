@@ -7,4 +7,7 @@
             @method('PUT')
             @include('layouts.AdminEntreprise.form')
         </form>
+
     </fieldset>
+@endsection
+
