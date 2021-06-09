@@ -24,7 +24,10 @@ class EmployeController extends Controller
     {
         return view('layouts.AdminEmploye.index', ['employees' => Employe::paginate(10)]);
     }
-
+    public function employe_index()
+    {
+        return view('layouts.Employe.employe_index', ['employees' => Employe::paginate(10)]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -95,6 +98,7 @@ class EmployeController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Employe  $employe
+     * @param  \App\Etudiant  $etudiant
      * @return \Illuminate\Http\Response
      */
     public function destroy(Employe $employee)
@@ -103,6 +107,24 @@ class EmployeController extends Controller
         return redirect()->route('employeDetails.index')->with('deleteEmploye', 'Employe has been deleted!');
     }
 
+    public function documents(){
+        return view('layouts.AdminEmploye.lettre');
+    }
+    /*
+    public function show()
+    {
+        $id = Auth::user()->id;
+        //
+        $data['data'] = DB::table('etudiants')->where('id','=', $id)->first();
+        if(count ($data)>0){
+            return view('layouts.AdminEmploye.lettre',compact('data'));
+        }
+        else
+        {
+            return view('layouts.AdminEmploye.lettre');
+        }
+    }
+*/
     private function validationRules()
     {
         return [

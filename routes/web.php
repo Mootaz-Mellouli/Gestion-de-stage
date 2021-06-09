@@ -23,9 +23,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /*****************Employe Routes************** */
 
-Route::get('/employe', 'EmployeController@employeList');
+Route::get('/employe', 'EmployeController@employe_Index')->name('employe');
+Route::get('/employe/documents', 'EmployeController@documents')->name('employe.docs');;
 
-Route::group(['middleware' => 'auth'], function() {
+Route::group(['middleware' => ['auth', 'isAdmin']], function() {
     Route::resource('employe/employeDetails', 'EmployeController')->parameters([
         'employeDetails' => 'employee'
     ]);
