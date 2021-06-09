@@ -20,6 +20,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/etudiants','HomeController@goEtudiant')->name('etudiant');
+Route::get('/encadreurs','HomeController@goEncadreur')->name('encadreur');
+Route::get('/entreprises','HomeController@goEntreprise')->name('entreprise');
 
 /*****************Employe Routes************** */
 

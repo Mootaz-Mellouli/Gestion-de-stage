@@ -65,24 +65,33 @@
                             <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
                             <i class="fas fa-search"></i>
                         </span> 
-                        <a id="bat" class="btn btn-primary btn-xl " href="resources\views\layouts\employe.blade.php">Employe</a>
+                        <a id="bat" class="btn btn-primary btn-xl " href="{{ route('etudiant') }}">Etudiant</a>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-male fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Ressource humaine</h4>
-                        <p class="text-muted">Informations sur les avantages sociaux et le développement professionnel, et ressources pour les managers</p>
-                    </div>
-                    <div class="col-md-4">
+                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                             <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
+                             <i class="fas fa-search"></i>
+                         </span> 
+                         <a id="bat" class="btn btn-primary btn-xl " href="{{ route('employe') }}">Employe</a>
+                     </div>
+                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-user-shield fa-stack-2x text-primary"></i>
-                            <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Securité</h4>
-                        <p class="text-muted">Assurer la sécurité et le bien-être de la communauté de l'Université</p>
-                    </div>
+                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                             <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
+                             <i class="fas fa-search"></i>
+                         </span> 
+                         <a id="bat" class="btn btn-primary btn-xl " href="{{ route('encadreur') }}">Encadreur</a>
+                     </div>
+                     <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                             <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
+                             <i class="fas fa-search"></i>
+                         </span> 
+                         <a id="bat" class="btn btn-primary btn-xl " href="{{ route('entreprise') }}">Entreprise</a>
+                     </div>
+ 
                 </div>
             </div>
         </section>
