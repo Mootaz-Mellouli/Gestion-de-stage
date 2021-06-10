@@ -34,6 +34,9 @@ class EncadreurController extends Controller
     {
         return view('layouts.Encadreur.encadreur_index', ['encadreurs' => Encadreurs::paginate(10)]);
     }
+    public function pfe(){
+        return view('layouts.AdminEncadreur.pfe');
+    }
     /**
      * Show the form for creating a new resource.
      *
