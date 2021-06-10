@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
 /********************************************* */
 
 Route::get('/encadreur', 'EncadreurController@encadreurList')->name('encadreur');
+Route::get('/encadreur/pfe', 'EncadreurController@pfe')->name('encadreur.pfe');;
 Route::group(['middleware' => ['auth', 'isAdmin']], function() {
     Route::resource('encadreur/encadreurDetails', 'EncadreurController')->parameters([
         'encadreurDetails' => 'encadreur'
@@ -59,3 +60,4 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
 
 Route::get('/etudiant', 'EtudiantController@etudiantList');
 Route::get('/stage','EtudiantController@stageView')->name('stage');
+Route::resource('fileupload','FileuploadController');
