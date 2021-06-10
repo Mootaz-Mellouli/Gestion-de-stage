@@ -16,7 +16,7 @@
         </button>
     </div>
 @endif
-    <h3><i class="fas fa-id-card"></i> Details about Entreprise : <strong>{{ $entreprise->nom.' '.$entreprise->prenom  }}</strong></h3>
+    <h3><i class="fas fa-id-card"></i> Details about Représentant : <strong>{{ $entreprise->nom.' '.$entreprise->prenom  }}</strong></h3>
     <div class="card" style="width: 38rem;">
         <div class="card-body">
             <h5 class="card-title"><i class="fas fa-user"></i> <strong>{{ $entreprise->nom.' '.$entreprise->prenom  }}</strong></h5>
