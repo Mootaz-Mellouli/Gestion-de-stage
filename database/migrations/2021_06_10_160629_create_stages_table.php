@@ -17,9 +17,9 @@ class CreateStagesTable extends Migration
             $table->increments('id');
             $table->string('nom_societe');
             $table->string('duree');
-            $table->enum('type_stage',array('initiation','perfectionnement'));
+            $table->enum('type_stage',array('initiation','perfectionnement','pfe'));
             $table->string('coordoonees');
-            $table->string('sujet')->default(null);
+            $table->string('sujet')->nullable();
             $table->timestamps();
 
         });
