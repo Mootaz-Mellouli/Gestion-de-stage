@@ -3,6 +3,16 @@
  * Copyright 2013-2021 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
  */
+let selectValue = document.querySelector('.typeStage');
+let sujetField = document.querySelector('#sujetField');
+selectValue.addEventListener('click', () => {
+    if (selectValue.options[selectValue.selectedIndex].value === "pfe") {
+        sujetField.style.display = "block";
+    } else {
+        sujetField.style.display = "none";
+    }
+});
+
 (function($) {
     "use strict"; // Start of use strict
 
