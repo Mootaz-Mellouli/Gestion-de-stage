@@ -12,4 +12,7 @@ class EtudiantController extends Controller
         $etudiant = Etudiant::all();
         return view('layouts.etudiant', ['etudiants' => $etudiant]);
     }
+    //public function stageView(){
+      //  return view('layouts/stage');
+    //}
 }

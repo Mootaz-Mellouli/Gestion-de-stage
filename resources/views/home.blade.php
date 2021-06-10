@@ -62,7 +62,7 @@
                     <div class="col-md-4">
                        <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-user-graduate fa-stack-1x fa-inverse"></i>
                             <i class="fas fa-search"></i>
                         </span> 
                         <a id="bat" class="btn btn-primary btn-xl " href="{{ route('etudiant') }}">Etudiant</a>
@@ -78,7 +78,7 @@
                      <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                             <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
+                             <i class="fas fa-user-tie fa-stack-1x fa-inverse"></i>
                              <i class="fas fa-search"></i>
                          </span> 
                          <a id="bat" class="btn btn-primary btn-xl " href="{{ route('encadreur') }}">Encadreur</a>
@@ -86,7 +86,7 @@
                      <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                             <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
+                             <i class="far fa-building fa-stack-1x fa-inverse"></i>
                              <i class="fas fa-search"></i>
                          </span> 
                          <a id="bat" class="btn btn-primary btn-xl " href="{{ route('entreprise') }}">Entreprise</a>
