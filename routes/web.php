@@ -48,7 +48,11 @@ Route::group(['middleware' => 'auth'], function() {
 
 
 Route::get('/entreprise','EntrepriseController@entrepriseList');
-
+Route::group(['middleware' => ['auth', 'isAdmin']], function() {
+  Route::resource('entreprise/entrepriseDetails', 'EntrepriseController')->parameters([
+      'entrepriseDetails' => 'entreprise'
+  ]);
+});
 
 /***************************************** */
 

@@ -14,7 +14,7 @@
         Détail d'entreprises
     </div>
     <div class="card-body">
-        <a href="{{ route('employees.create') }}" class="btn btn-outline-primary float-right"><i class="fas fa-user-plus"></i> Ajout d'un Entreprise</a>
+        <a href="{{ route('entrepriseDetails.create') }}" class="btn btn-outline-primary float-right"><i class="fas fa-user-plus"></i> Ajout d'un Entreprise</a>
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
@@ -26,11 +26,11 @@
                         <th>Name Entreprise </th>
                         <th>Email Entreprise</th>
                         <th>Start Date</th>
-                        <th>Action</th>
+                        <th colspan="3">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($entreprises as $key => $ent)
+                    @foreach ($entreprise as $key => $ent)
                         <tr>
                             <td>{{ $ent['id'] }}</td>
                             <td>{{ $ent['nom'] }}</td>
@@ -40,13 +40,13 @@
                             <td>{{ $ent['emailEntreprise'] }}</td>
                             <td>{{ $ent['created_at'] }}</td>
                             <td>
-                                <a href="{{ route('entreprises.show', $ent->id) }}" class="btn btn-info" title="Show details about {{ $ent->nom.' '.$ent->prenom  }}"><i class="fas fa-user-tag"></i></a>
-                                <a href="{{ route('entreprises.edit', $ent->id) }}" class="btn btn-warning" title="Edit user {{ $ent->nom.' '.$ent->prenom  }}">
+                                <a href="{{ route('entrepriseDetails.show', $ent->id) }}" class="btn btn-info" title="Show details about {{ $ent->nom.' '.$ent->prenom  }}"><i class="fas fa-user-tag"></i></a>
+                                <a href="{{ route('entrepriseDetails.edit', $ent->id) }}" class="btn btn-warning" title="Edit user {{ $ent->nom.' '.$ent->prenom  }}">
                                     <i class="fas fa-user-edit"></i>
                                 </a>
                                 <a href="#" class="btn btn-danger" title="Delete user {{ $ent->nom.' '.$ent->prenom  }}"
                                     onclick="event.preventDefault(); document.querySelector('#delete-entreprise-form').submit()"><i class="fas fa-user-slash"></i></a>
-                                <form action="{{ route('entreprises.destroy', $ent->id) }}" method="post" id="delete-entreprise-form">@csrf @method('DELETE')</form>
+                                <form action="{{ route('entrepriseDetails.destroy', $ent->id) }}" method="post" id="delete-entreprise-form">@csrf @method('DELETE')</form>
                             </td>
                         </tr>
                     @endforeach
