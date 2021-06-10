@@ -21,7 +21,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/etudiants','HomeController@goEtudiant')->name('etudiant');
-Route::get('/encadreurs','HomeController@goEncadreur')->name('encadreur');
 Route::get('/entreprises','HomeController@goEntreprise')->name('entreprise');
 
 /*****************Employe Routes************** */
@@ -37,8 +36,8 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
 
 /********************************************* */
 
-Route::get('/encadreur', 'EncadreurController@encadreurList');
-Route::group(['middleware' => 'auth'], function() {
+Route::get('/encadreur', 'EncadreurController@encadreurList')->name('encadreur');
+Route::group(['middleware' => ['auth', 'isAdmin']], function() {
     Route::resource('encadreur/encadreurDetails', 'EncadreurController')->parameters([
         'encadreurDetails' => 'encadreur'
     ]);

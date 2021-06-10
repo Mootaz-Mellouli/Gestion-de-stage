@@ -7,6 +7,7 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+   
 @endif
 <div class="card mb-4">
     <div class="card-header">
@@ -18,14 +19,14 @@
         <div class="table table-striped ">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead class="table-dark">
-                    <tr>
+                    <tr style="text-align:center;">
                         <th></th>
                         <th>Nom</th>
                         <th>Prenom</th>
                         <th>Telephone</th>
                         <th>Email</th>
-                        <th>specialité</th>
-                        <th>Start date</th>
+                        <th>Specialité</th>
+                        <th>Date de Creation</th>
                         <th colspan="3">Action</th>
                     </tr>
                 </thead>
@@ -58,7 +59,14 @@
                     @endforeach
                 </tbody>
             </table>
+            <div style="margin-left:490px;">
+            <span>
+            {{$encadreurs->links()}}
+            </span>
+            </div>
         </div>
     </div>
 </div>
+<style>
+
 @endsection

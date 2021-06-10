@@ -27,9 +27,13 @@ class EncadreurController extends Controller
     }
     public function index()
     {
+        $encadreur=Encadreur::paginate(5);
         return view('layouts.AdminEncadreur.index', ['encadreurs' => Encadreur::paginate(10)]);
     }
-
+    public function encadreur_index()
+    {
+        return view('layouts.Encadreur.encadreur_index', ['encadreurs' => Encadreurs::paginate(10)]);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -74,7 +78,6 @@ class EncadreurController extends Controller
      */
     public function show(Encadreur $encadreur)
     {
-        //$employe = Employe::find($id);
         return view('layouts.AdminEncadreur.show', ['encadreur' => $encadreur]);
     }
 
