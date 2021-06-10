@@ -25,7 +25,6 @@ Route::group(['middleware' => 'auth'], function() {
   Route::get('/employe', 'EmployeController@employe_Index')->name('employe');
   Route::get('/employe/documents', 'EmployeController@documents')->name('employe.docs');
 
-  Route::resource('employe/stages', 'EmployeStageController');
 
 });
 
@@ -34,6 +33,7 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
     Route::resource('employe/employeDetails', 'EmployeController')->parameters([
         'employeDetails' => 'employee'
     ]);
+    Route::resource('employe/stages', 'EmployeStageController');
   });
 
 /********************************************* */
