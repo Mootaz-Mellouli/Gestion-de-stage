@@ -26,7 +26,13 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('employe') }}#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('employe.docs') }}">Documentation</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('employe.docs') }}">Document de stage</a>
+                            <a class="dropdown-item" href="{{ route('stages.index') }}">Gestion de stage</a>
+                            </div>
+                        </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('employe') }}#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('employe') }}#contact">Contact</a></li>
                             <!-- Authentication Links -->
@@ -64,6 +70,12 @@
                 </div>
             </div>
         </nav>
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading" style="letter-spacing: 20px;font-size:5rem">Documents</div>
+                <div class="masthead-heading text-uppercase"></div>
+            </div>
+        </header>
         <main>@yield('content')</main>
         <!-- Footer-->
         <footer class="footer py-4" style="background-color:rgb(22, 22, 22)">

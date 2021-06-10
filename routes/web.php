@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/','HomeController@welcome');
 
 Auth::routes();
@@ -24,9 +21,14 @@ Route::get('/etudiants','HomeController@goEtudiant')->name('etudiant');
 Route::get('/entreprises','HomeController@goEntreprise')->name('entreprise');
 
 /*****************Employe Routes************** */
+Route::group(['middleware' => 'auth'], function() {
+  Route::get('/employe', 'EmployeController@employe_Index')->name('employe');
+  Route::get('/employe/documents', 'EmployeController@documents')->name('employe.docs');
 
-Route::get('/employe', 'EmployeController@employe_Index')->name('employe');
-Route::get('/employe/documents', 'EmployeController@documents')->name('employe.docs');;
+  Route::resource('employe/stages', 'EmployeStageController');
+
+});
+
 
 Route::group(['middleware' => ['auth', 'isAdmin']], function() {
     Route::resource('employe/employeDetails', 'EmployeController')->parameters([
