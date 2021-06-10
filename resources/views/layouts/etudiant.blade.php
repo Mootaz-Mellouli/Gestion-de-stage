@@ -84,6 +84,7 @@
                             <i class="fas fa-search fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Trouvez Un Stage</h4>
+                        <a id="bat" class="btn btn-primary btn-xl " href="{{ route('stage') }}">stage</a>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">

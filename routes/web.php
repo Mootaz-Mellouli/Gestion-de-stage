@@ -58,4 +58,4 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
 /***************************************** */
 
 Route::get('/etudiant', 'EtudiantController@etudiantList');
-Route::get('/entreprises','HomeController@stageView')->name('entreprise');
+Route::get('/stage','EtudiantController@stageView')->name('stage');
