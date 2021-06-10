@@ -64,7 +64,7 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Bienvenu dans la partie Etudiant de ce site</div>
+                <div class="masthead-subheading">Bienvenue dans la partie Etudiant de ce site</div>
                 <div class="masthead-heading text-uppercase">Trouvez un stage facilement</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Plus d'info</a>
             </div>
@@ -83,8 +83,8 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-search fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Trouvez Un Stage</h4>
-                        <a id="bat" class="btn btn-primary btn-xl " href="{{ route('stage') }}">stage</a>
+                        
+                        <a id="bat" class="btn btn-primary btn-xl " href="{{ route('stage') }}">Trouvez un stage</a>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
