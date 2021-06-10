@@ -24,7 +24,7 @@ Gestion de Stage
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Nom</th>
+                        <th>Nom societé</th>
                         <th>Duree</th>
                         <th>Type</th>
                         <th>Detail</th>
@@ -44,7 +44,7 @@ Gestion de Stage
                             <td>{{ $st['sujet'] }}</td>
                             <td>{{ $st['created_at'] }}</td>
                             <td>
-                                <a href="{{ route('stages.edit', $st->id) }}" class="btn btn-warning" title="Edit user {{ $st->nom_stage  }}">
+                                <a href="{{ route('stages.edit', $st->id) }}" class="btn btn-warning" title="Edit stage">
                                     <i class="fas fa-user-edit"></i>
                                 </a>
                             </td>
@@ -52,7 +52,7 @@ Gestion de Stage
                                 <form action="{{ route('stages.destroy', $st->id) }}" method="post">
                                     @csrf 
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger" title="Delete user {{ $st->nom_stage }}"><i class="fas fa-user-slash"></i></button>
+                                    <button type="submit" class="btn btn-danger" title="Delete stage"><i class="fas fa-user-slash"></i></button>
                                 </form>
                             </td>
                         </tr>

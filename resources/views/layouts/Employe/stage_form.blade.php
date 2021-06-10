@@ -29,7 +29,7 @@
     </div>
     <div class="col">
         <div class="form-group">
-            <label for="coordoonnes">Coordoonnes</label>
+            <label for="coordoonnes">Coordoonnées</label>
             <input type="coordoonnes" name="coordoonees" value="{{ $stages->coordoonees ?? old('coordoonees') }}" id="coordoonees" class="form-control @error('coordoonees') is-invalid @enderror" placeholder="Coordonnee de entreprise">
             @error('coordoonnes')<div class="text-danger">{{ $message }}</div>@enderror
             </div>

@@ -18,7 +18,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" style="color:white;letter-spacing:3px" href="#page-top"><img src="employeImages/navbar-logo.png" style="height:50px;" alt="logo" />ISET Bizerte</a>
+                <a class="navbar-brand js-scroll-trigger" style="color:white;letter-spacing:3px" href="#page-top"><img src="{{URL::asset('employeImages/navbar-logo.png')}}" height="50" alt="logo" />ISET Bizerte</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
@@ -30,10 +30,12 @@
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Documentation</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('employe.docs') }}">Document de stage</a>
-                            <a class="dropdown-item" href="{{ route('stages.index') }}">Gestion de stage</a>
+                            @if (Auth::user()->role != 0)
+                                <a class="dropdown-item" href="{{ route('stages.index') }}">Gestion de stage</a>                            
+                            @endif
+
                             </div>
                         </li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('employe') }}#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('employe') }}#contact">Contact</a></li>
                             <!-- Authentication Links -->
                             @guest
@@ -60,6 +62,7 @@
                                         @if (Auth::user()->role != 0)
                                             <a class="dropdown-item" href="{{ route('employeDetails.index') }}">Dashboard</a>
                                         @endif
+                                        
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
                                         </form>
@@ -73,11 +76,10 @@
         <header class="masthead">
             <div class="container">
                 <div class="masthead-subheading" style="letter-spacing: 10px;font-size:3rem">@yield('title','Bienvenu dans la Employe')</div>
-                
                 <div class="masthead-heading text-uppercase"></div>
             </div>
         </header>
-        <main>@yield('content')</main>
+        <main style="margin:20px;background-image:url('{{URL::asset('employeImages/contentBack.jpg')}}')">@yield('content')</main>
         <!-- Footer-->
         <footer class="footer py-4" style="background-color:rgb(22, 22, 22)">
             <div class="container">
@@ -86,6 +88,7 @@
                         Copyright &copy; ISET Bizerte
                         <script>
                             document.write(new Date().getFullYear());
+                            
                         </script>
                     </div>
                     <div class="col-lg-4 my-3 my-lg-0">
