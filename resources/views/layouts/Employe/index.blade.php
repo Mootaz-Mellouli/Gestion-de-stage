@@ -41,7 +41,11 @@ Gestion de Stage
                             <td>{{ $st['duree'] }}</td>
                             <td>{{ $st['type_stage'] }}</td>
                             <td>{{ $st['coordoonees'] }}</td>
-                            <td>{{ $st['sujet'] }}</td>
+                            @if($stages['type_stage'] == "pfe")
+                                <td>{{ $st['sujet'] }}</td>
+                            @else 
+                                <td>Aucun PFE</td>
+                            @endif
                             <td>{{ $st['created_at'] }}</td>
                             <td>
                                 <a href="{{ route('stages.edit', $st->id) }}" class="btn btn-warning" title="Edit stage">
