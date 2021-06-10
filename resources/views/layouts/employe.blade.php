@@ -72,7 +72,8 @@
         </nav>
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading" style="letter-spacing: 20px;font-size:5rem">Documents</div>
+                <div class="masthead-subheading" style="letter-spacing: 10px;font-size:3rem">@yield('title','Bienvenu dans la Employe')</div>
+                
                 <div class="masthead-heading text-uppercase"></div>
             </div>
         </header>
