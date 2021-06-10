@@ -1,4 +1,7 @@
 @extends('layouts.employe')
+@section('title')
+    Documentation de Stage
+@endsection
 @section('content')
     <header>
         <style>

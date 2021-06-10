@@ -1,4 +1,7 @@
 @extends('layouts.employe')
+@section('title')
+Gestion de Stage
+@endsection
 @section('content')
 @if (session('deleteStage'))
     <div class="alert alert-dismissible alert-success fade show" role="alert">
@@ -11,7 +14,7 @@
 
 <div class="card mb-4">
     <div class="card-header">
-        <a href="{{ route('stages.create') }}" class="btn btn-outline-primary float-right"><i class="fas fa-user-plus"></i> Ajout d'un Employe</a>
+        <a href="{{ route('stages.create') }}" class="btn btn-danger float-right"><i class="fas fa-user-plus"></i> Ajout d'un Stage</a>
         <i class="fas fa-table mr-1"></i>
         Détail des stages
     </div>
