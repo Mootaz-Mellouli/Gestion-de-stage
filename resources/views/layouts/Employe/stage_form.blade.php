@@ -17,13 +17,13 @@
 </div>
 <div class="row">
     <div class="col">
-        <div class="form-group">
+        <div class="form-group" id="typeContainer">
             <label for="type">Type de Stage</label>
-            <select name="type_stage" id="type" class="form-control">
+            <select name="type_stage" id="type" class="form-control typeStage">
                 <option>Choose...</option>
-                <option value="initiation">Initiation</option>
-                <option value="perfectionnement">Perfectionnement</option>
-                <option value="pfe">PFE</option>
+                <option value="initiation" {{ old('type_stage', $stages->type_stage) == "initiation" ? 'selected' : '' }}>Initiation</option>
+                <option value="perfectionnement" {{ old('type_stage', $stages->type_stage) == "perfectionnement" ? 'selected' : '' }}>Perfectionnement</option>
+                <option value="pfe" {{ old('type_stage', $stages->type_stage) == "pfe" ? 'selected' : '' }}>PFE</option>
             </select>
         </div>
     </div>
@@ -34,7 +34,7 @@
             @error('coordoonnes')<div class="text-danger">{{ $message }}</div>@enderror
             </div>
     </div>
-    <div class="col">
+    <div class="col" id="sujetField" style="display:none">
         <div class="form-group">
             <label for="sujet">Sujet</label>
             <input type="text" name="sujet" value="{{ $stages->sujet ?? old('sujet') }}" id="sujet" class="form-control @error('sujet') is-invalid @enderror" placeholder="Sujet PFE">
