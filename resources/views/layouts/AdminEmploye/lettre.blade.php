@@ -1,10 +1,10 @@
 @extends('layouts.employe')
 @section('content')
-    <header class="masthead">
+    <header>
         <style>
             #printer_dem,#printer_aff{
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                background: rgb(231, 231, 231);
+                background: #e7e7e7;
                 padding:50px;
             }
             #he{
@@ -36,10 +36,6 @@
                 return false;
             }
         </script>
-        <div class="container">
-            <div class="masthead-subheading" style="letter-spacing: 20px;font-size:5rem">Documents</div>
-            <div class="masthead-heading text-uppercase"></div>
-        </div>
     </header>
     <section class="page-section" id="services">
         

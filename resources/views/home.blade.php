@@ -59,7 +59,7 @@
                     
                 </div>
                 <div class="row text-center">
-                    <div class="col-md-4">
+                    <div class="col-md">
                        <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
@@ -67,7 +67,7 @@
                         </span> 
                         <a id="bat" class="btn btn-primary btn-xl " href="{{ route('etudiant') }}">Etudiant</a>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md">
                         <span class="fa-stack fa-4x">
                              <i class="fas fa-circle fa-stack-2x text-primary"></i>
                              <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
@@ -75,7 +75,7 @@
                          </span> 
                          <a id="bat" class="btn btn-primary btn-xl " href="{{ route('employe') }}">Employe</a>
                      </div>
-                     <div class="col-md-4">
+                     <div class="col-md">
                         <span class="fa-stack fa-4x">
                              <i class="fas fa-circle fa-stack-2x text-primary"></i>
                              <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
@@ -83,7 +83,7 @@
                          </span> 
                          <a id="bat" class="btn btn-primary btn-xl " href="{{ route('encadreur') }}">Encadreur</a>
                      </div>
-                     <div class="col-md-4">
+                     <div class="col-md">
                         <span class="fa-stack fa-4x">
                              <i class="fas fa-circle fa-stack-2x text-primary"></i>
                              <i class="fas fa-file-signature fa-stack-1x fa-inverse"></i>
@@ -95,24 +95,6 @@
                 </div>
             </div>
         </section>
-
-
-        <!-- Team-->
-        <section class="page-section bg-light" id="team">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Liste d'employés</h2>
-                    <h3 class="section-subheading text-muted"></h3>
-                </div>
-                <div class="row">
-                   
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container">

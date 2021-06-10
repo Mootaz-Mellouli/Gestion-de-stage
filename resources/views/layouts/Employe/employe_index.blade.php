@@ -1,13 +1,6 @@
 @extends('layouts.employe')
 @section('content')
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container">
-            <div class="masthead-subheading">Bienvenu dans la partie Employe de ce site</div>
-            <div class="masthead-heading text-uppercase">Cette partie gére les employés</div>
-            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Plus d'info</a>
-        </div>
-    </header>
+
     <!-- Services-->
     <section class="page-section" id="services">
         <div class="container">
