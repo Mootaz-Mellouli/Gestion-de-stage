@@ -66,7 +66,11 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
 
 Route::get('/etudiant', 'EtudiantController@etudiantList');
 Route::get('/stage','EtudiantController@stageView')->name('stage');
+Route::get('/contactEncadrant','EtudiantController@EncadrantView')->name('contactEncadrant');
 
+
+
+/************************************************************************ */
 Route::resource('fileupload','FileuploadController');
 
 Route::get('/download',function(){

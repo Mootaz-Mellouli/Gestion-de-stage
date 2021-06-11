@@ -91,7 +91,7 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Contacter Un Encadrant</h4>
+                        <a id="bat" class="btn btn-primary btn-xl " href="{{ route('contactEncadrant') }}">Contacter un encadrant</a>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">

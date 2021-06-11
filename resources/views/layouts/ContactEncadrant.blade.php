@@ -12,23 +12,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
+      @foreach ($encadreurs as $key => $encadreur)
+            <tr>
+            <th scope="row">{{$key}}</th>
+            <td >{{$encadreur -> first_name.' '.$encadreur ->last_name}}</td>
+            <td >{{$encadreur -> phone_number}}</td>  
+            <td >{{$encadreur -> email}}</td>    
+          </tr>
+      @endforeach
+    
     </tbody>
   </table>
 @endsection
