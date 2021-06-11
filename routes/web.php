@@ -47,6 +47,12 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
   });
 
 /********************************************* */
+Route::group(['middleware' => ['auth', 'isAdmin']], function() {
+  Route::resource('employe/employeDetails', 'EmployeController')->parameters([
+      'employeDetails' => 'employee'
+  ]);
+  Route::resource('entreprise/entrepriseStages', 'EntrepriseStageController');
+});
 
 
 Route::get('/entreprise','EntrepriseController@entrepriseList');
@@ -60,4 +66,5 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
 
 Route::get('/etudiant', 'EtudiantController@etudiantList');
 Route::get('/stage','EtudiantController@stageView')->name('stage');
+Route::get('/entrepriseStage','EntrepriseController@entrepriseStageView')->name('entrepriseStage');
 Route::resource('fileupload','FileuploadController');
