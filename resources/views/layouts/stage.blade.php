@@ -2,6 +2,7 @@
 
 @section('content')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<h2>Liste des stages </h2>
 <table class="table table-hover">
     <thead>
       <tr>

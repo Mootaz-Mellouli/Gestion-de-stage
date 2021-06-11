@@ -91,14 +91,14 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
                         </span>
-                        <a id="bat" class="btn btn-primary btn-xl " href="{{ route('contactEncadrant') }}">Contacter un encadrant</a>
+                        <a id="bat" class="btn btn-primary btn-xl " href="{{ route('contactEncadrant') }}">Contacter Encadrant</a>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-graduation-cap fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Projet Fin D'étude</h4>
+                        <a id="bat" class="btn btn-primary btn-xl " href="{{ route('stage') }}">PFE</a>
                     </div>
                 </div>
             </div>
