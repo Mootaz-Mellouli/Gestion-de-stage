@@ -47,6 +47,12 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
   });
 
 /********************************************* */
+Route::group(['middleware' => ['auth', 'isAdmin']], function() {
+  Route::resource('employe/employeDetails', 'EmployeController')->parameters([
+      'employeDetails' => 'employee'
+  ]);
+  Route::resource('entreprise/entrepriseStages', 'EntrepriseStageController');
+});
 
 
 Route::get('/entreprise','EntrepriseController@entrepriseList');
@@ -60,7 +66,7 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
 
 Route::get('/etudiant', 'EtudiantController@etudiantList');
 Route::get('/stage','EtudiantController@stageView')->name('stage');
-Route::resource('fileupload','FileuploadController');
+<<<<<<< HEAD
 
 Route::get('/download',function(){
   $file = public_path()."/RédactionPFE.pdf";
@@ -73,3 +79,7 @@ Route::get('/download',function(){
 
 
 });
+=======
+Route::get('/entrepriseStage','EntrepriseController@entrepriseStageView')->name('entrepriseStage');
+Route::resource('fileupload','FileuploadController');
+>>>>>>> c0b2abd6a802d2ddb74e6a4f12fa353691f2c3fa
