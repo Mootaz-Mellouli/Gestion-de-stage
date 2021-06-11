@@ -73,7 +73,7 @@
         <header class="masthead">
             <div class="container">
               
-                <div class="masthead-heading text-uppercase">Bienvenue l'application gestion de stage</div>
+                <div class="masthead-heading text-uppercase">Bienvenue l'application gestion de stages</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Plus d'info</a>
             </div>
         </header>
@@ -82,7 +82,7 @@
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <h2 class="section-heading text-uppercase">Espaces</h2>
                     
                 </div>
                 <div class="row text-center">
@@ -127,7 +127,6 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 <form id="contactForm" name="sentMessage" novalidate="novalidate">
                     <div class="row align-items-stretch mb-5">

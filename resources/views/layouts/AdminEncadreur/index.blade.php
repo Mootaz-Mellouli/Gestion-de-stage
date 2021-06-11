@@ -13,7 +13,7 @@
     <div class="card-header">
         <a href="{{ route('encadreurDetails.create') }}" class="btn btn-outline-primary float-right"><i class="fas fa-user-plus"></i> Ajout d'un Encadrant</a>
         <i class="fas fa-table mr-1"></i>
-        Détail d'encadrants
+        Détails des encadrants
     </div>
     <div class="card-body">
         <div class="table table-striped ">
@@ -68,5 +68,6 @@
     </div>
 </div>
 <style>
+<link rel="stylesheet" href="{{ URL::asset('css/Styles.css') }}">
 
 @endsection

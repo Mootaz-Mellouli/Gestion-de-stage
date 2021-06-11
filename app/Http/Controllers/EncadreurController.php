@@ -69,8 +69,7 @@ class EncadreurController extends Controller
 
         return redirect()->route('encadreurDetails.show',$encadreur)->with('storeEncadreur', "Encadreur a été ajouté avec succès");
         
-        //$employe = Employe::create($validatedData);
-        //return redirect()->route('employeDetails.show',$employe)->with('storeEmploye', "Employe has been added successfuly");
+       
     }
 
     /**
@@ -102,7 +101,7 @@ class EncadreurController extends Controller
         $encadreur->email = $request->email;
         $encadreur->specialty = $request->specialty;
         $encadreur->save();
-        return redirect()->route('employeDetails.show', $employee)->with('updateEncadreur', "Encadreur a été mis à jour avec succès");
+        return redirect()->route('encadreurDetails.show', $encadreur)->with('updateEncadreur', "Encadreur a été mis à jour avec succès");
     }
 
   

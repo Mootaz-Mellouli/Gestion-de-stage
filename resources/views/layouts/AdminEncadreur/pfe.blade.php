@@ -14,6 +14,8 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{ asset('css/styleEmploye.css') }}" />
         <link rel="stylesheet" href="{{ asset('css/bootstrap-min.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/pdf.css') }}" />
+
 
     </head>
     <body id="page-top">
@@ -27,10 +29,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('encadreur') }}">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('encadreur.pfe') }}">PFE</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+           
                             <!-- Authentication Links -->
                             @guest
                                 <li class="nav-item">
@@ -77,18 +78,26 @@
             <form method="POST" enctype="multipart/form-data" action="{{route('fileupload.store')}}">
             @csrf
              <div class="form-group">
-           <label for="exampleFormControlFile1">Insérer votre PFE ici</label>
-           <input type="file" class="form-control-file" name="uploadedfile" id="exampleFormControlFile1">
-           <div class="form-group"><button class="btn btn-success">Upload the file</button></div>
+                 <div style=" padding-top: 60px; margin-left:460px;  color:white;">
+           <label for="exampleFormControlFile1">Insérer votre PFE ici:</label>
+           <input  type="file" class="form-control-file" name="uploadedfile" id="exampleFormControlFile1">
+                 </div>
+           <div style="margin-top:20px;text-align:center; padding:20px;"  class="form-group"><button class="btn btn-success">Télécharger votre PFE</button></div>
            @if(session()->has('message'))
     <div class="alert alert-success">
         {{ session()->get('message') }}
+        </div>
     </div>
+
 @endif
 
-             </div>    
+             </div>
+             
             </form>
+            
            </div>
+           <h5>Cette fiche fournit quelques conseils de rédaction d’un mémoire. Elle est valable aussi bien pour un rapport de stage <br>que pour un mémoire de PFE.<h5>
+             <a href="/download" class="button">Download Now</a>   
         </section>
         </body>
         </html>

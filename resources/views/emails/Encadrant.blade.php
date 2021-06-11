@@ -1,7 +1,8 @@
 @component('mail::message')
-# Introduction
+# Gestion des Stage - DSI22
 
-The body of your message.
+We are happy to announce that your account has been added.
+
 
 @component('mail::button', ['url' => ''])
 Button Text
