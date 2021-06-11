@@ -66,7 +66,8 @@ Route::group(['middleware' => ['auth', 'isAdmin']], function() {
 
 Route::get('/etudiant', 'EtudiantController@etudiantList');
 Route::get('/stage','EtudiantController@stageView')->name('stage');
-<<<<<<< HEAD
+
+Route::resource('fileupload','FileuploadController');
 
 Route::get('/download',function(){
   $file = public_path()."/RédactionPFE.pdf";
@@ -77,9 +78,4 @@ Route::get('/download',function(){
 
   return Response::download($file, "RédactionPDF.pdf", $headers);
 
-
-});
-=======
-Route::get('/entrepriseStage','EntrepriseController@entrepriseStageView')->name('entrepriseStage');
-Route::resource('fileupload','FileuploadController');
->>>>>>> c0b2abd6a802d2ddb74e6a4f12fa353691f2c3fa
+}); 
